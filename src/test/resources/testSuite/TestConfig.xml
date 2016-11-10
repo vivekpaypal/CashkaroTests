@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" verbose="1" name="LOLRQATestSuite"
+
+	data-provider-thread-count="1" annotations="JDK">
+	
+	
+	<parameter name="browser" value="chrome" />
+	
+	<parameter name="url" value="http://cashkaro.iamsavings.co.uk/" />
+	<test name="Test1" annotations="JDK" preserve-order="true">
+	
+		<classes>
+		<class name="com.cashkaro.feature.tests.CashCaroLoginTest"></class>
+		</classes>
+		
+	</test>
+	
+	
+</suite>

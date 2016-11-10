@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [LOLRQATestSuite]" data-provider-thread-count="1">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="http://cashkaro.iamsavings.co.uk/"/>
+  <test name="Test1(failed)">
+    <classes>
+      <class name="com.cashkaro.feature.tests.CashCaroLoginTest">
+        <methods>
+          <include name="signUpEmailTest"/>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+          <include name="signUpFacebookTest"/>
+        </methods>
+      </class> <!-- com.cashkaro.feature.tests.CashCaroLoginTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [LOLRQATestSuite] -->
