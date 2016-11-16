@@ -6,6 +6,8 @@ import java.util.Set;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.os.WindowsUtils;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -14,6 +16,10 @@ import com.thoughtworks.selenium.webdriven.Windows;
 import com.thoughtworks.selenium.webdriven.commands.WaitForPopup;
 
 public class BasePage {
+	
+	
+	@FindBy(how = How.LINK_TEXT,using= "MY ACCOUNT")
+    protected WebElement accountButton;
 	
 	
 	public BasePage() {
@@ -56,7 +62,7 @@ public class BasePage {
 	
 	
 	public void moveToFrame(WebElement frame){
-		
+		waitForElement(frame);
 		DriverSession.getDriver().switchTo().frame(frame);
 		
 		

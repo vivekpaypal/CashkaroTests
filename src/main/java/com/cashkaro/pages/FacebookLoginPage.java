@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.cashkaro.test.DriverSession;
 
-public class FacebookLoginPage {
+public class FacebookLoginPage extends BasePage {
 	
 	
 	@FindBy(how = How.ID, using = "email")
@@ -16,6 +16,9 @@ public class FacebookLoginPage {
     private WebElement passwordTextField;
 	@FindBy(how = How.NAME, using = "login")
     private WebElement loginButton;
+	@FindBy(how = How.NAME, using = "__CONFIRM__")
+    private WebElement confirmButton;
+	
 	
 	public static FacebookLoginPage getInstance(){
 		
@@ -29,6 +32,7 @@ public class FacebookLoginPage {
 		emailTextField.sendKeys(emailorPhone);
 		passwordTextField.sendKeys(pwd);
 		loginButton.click();
+			
 		
 	}
 
